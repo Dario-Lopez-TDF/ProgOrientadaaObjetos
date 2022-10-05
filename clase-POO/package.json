@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "ascii-art": "^2.8.5",
+    "dayjs": "^1.11.5",
+    "figlet": "^1.5.2",
+    "mathjs": "^11.1.0",
+    "mathjs-translate": "^0.2.2",
+    "moment": "^2.29.4",
+    "readline-sync": "^1.4.10"
+  },
+  "name": "clase-poo",
+  "version": "1.0.0",
+  "main": "miPrimerEjercicio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
