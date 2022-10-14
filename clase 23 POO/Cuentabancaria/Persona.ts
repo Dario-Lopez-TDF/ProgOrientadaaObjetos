@@ -1,4 +1,6 @@
-export class Persona  {
+import { InterfazPersona } from '../InterfazePersona/InterfazPersonas';
+
+export class Persona implements InterfazPersona {
     protected nombre:string;
     protected apellido: string;
     protected dni: number;
@@ -27,6 +29,11 @@ export class Persona  {
     }
     public getDni():number {
         return this.dni
+    }
+
+    public nombreCompleto():string {
+        let fullname:string = "Nombre: " + this.nombre +' '+ "Apellido: " +this.apellido;
+        return fullname;
     }
 
 

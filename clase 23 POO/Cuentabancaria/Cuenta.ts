@@ -1,4 +1,4 @@
-import { Persona } from './Persona';
+import { Persona } from './Persona'; // mio  //////////
 
 export abstract class Cuenta{
     protected numeroCuenta: number;
@@ -8,6 +8,8 @@ export abstract class Cuenta{
     constructor (paramNroCuenta:number,paramCliente:Persona) {
         this.numeroCuenta = paramNroCuenta;
         this.cliente = paramCliente;
+        this.saldo = 0;
+        
     }
 
     public setCliente(paramCliente:Persona):void {
@@ -38,6 +40,10 @@ export abstract class Cuenta{
 
     abstract retirar(paramRetiro:number):void;
     abstract actualizarSaldo():void;
+
+    toString():string {
+        return '(' + this.cliente + ' , ' + this.numeroCuenta + ' , ' + this.saldo +')';
+    }
 
 }
 
