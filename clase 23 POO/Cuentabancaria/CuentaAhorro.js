@@ -20,7 +20,9 @@ var Cuenta_1 = require("./Cuenta");
 var CuentaAhorro = /** @class */ (function (_super) {
     __extends(CuentaAhorro, _super);
     function CuentaAhorro(paramNroCuenta, paramCliente) {
-        return _super.call(this, paramNroCuenta, paramCliente) || this;
+        var _this = _super.call(this, paramNroCuenta, paramCliente) || this;
+        _this.saldoMinimo = 100000;
+        return _this;
     }
     CuentaAhorro.prototype.setSaldoMinimo = function (paramSaldoMin) {
         this.saldoMinimo = paramSaldoMin;
@@ -35,13 +37,13 @@ var CuentaAhorro = /** @class */ (function (_super) {
         return this.interes;
     };
     CuentaAhorro.prototype.retirar = function (paramRetiro) {
-        //let aux = this.saldo - this.saldoMinimo;
-        if (this.saldo > paramRetiro) {
+        var aux = this.saldo - this.saldoMinimo;
+        if (aux > paramRetiro) {
             this.saldo = this.saldo - paramRetiro;
             console.log("Usted ha retirado $ " + paramRetiro);
         }
         else {
-            console.log("***Su saldo es insuficiente***. ### No puede retirar esa cantidad ###");
+            console.log("**Su saldo es insuficiente o No puede retirar esa cantidad ya que irterfiere con el saldo minimo**");
         }
     };
     CuentaAhorro.prototype.actualizarSaldo = function () {

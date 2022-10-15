@@ -22,6 +22,7 @@ export class CuentaCorriente extends Cuenta {
         this.saldo = this.saldo * 1.015; // valor fijo de 1,5% anual = a 1.015 valor numerco centesimal
     }
 
+
     toString():string {
         return '(' + this.cliente.nombreCompleto() + ' , '+ "Nº de Cuenta: " + this.numeroCuenta + ' , '+"Saldo: $ " + this.saldo +')';
     }

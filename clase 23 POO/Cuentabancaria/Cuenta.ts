@@ -32,7 +32,6 @@ export abstract class Cuenta{
         return this.saldo
     }
 
-
     public ingresar(paramIngreso:number): void{
        console.log(paramIngreso);
        this.saldo = this.saldo + paramIngreso;
@@ -41,9 +40,10 @@ export abstract class Cuenta{
     abstract retirar(paramRetiro:number):void;
     abstract actualizarSaldo():void;
 
-    toString():string {
-        return '(' + this.cliente + ' , ' + this.numeroCuenta + ' , ' + this.saldo +')';
+    public toString():string {
+        return '(' + this.cliente.nombreCompleto() + ' , '+ "Nº de Cuenta: " + this.numeroCuenta + ' , '+"Saldo: $ " + this.saldo +')';
     }
+
 
 }
 

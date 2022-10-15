@@ -30,7 +30,7 @@ var Cuenta = /** @class */ (function () {
         this.saldo = this.saldo + paramIngreso;
     };
     Cuenta.prototype.toString = function () {
-        return '(' + this.cliente + ' , ' + this.numeroCuenta + ' , ' + this.saldo + ')';
+        return '(' + this.cliente.nombreCompleto() + ' , ' + "Nº de Cuenta: " + this.numeroCuenta + ' , ' + "Saldo: $ " + this.saldo + ')';
     };
     return Cuenta;
 }());
