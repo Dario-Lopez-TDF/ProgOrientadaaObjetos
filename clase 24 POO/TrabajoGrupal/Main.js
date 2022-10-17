@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var ListaDeAnimales_1 = require("./ListaDeAnimales");
+var Gato_1 = require("./Gato");
+var Pez_1 = require("./Pez");
+var Ara_a_1 = require("./Ara\u00F1a");
+var animal1 = new Gato_1.Gato("Kitty", 4);
+var animal2 = new Pez_1.Pez("Fish", 0);
+var animal3 = new Ara_a_1.Araña(8);
+var animal4 = new Gato_1.Gato("K", 4);
+var arrayAnimales = [animal1, animal2, animal3];
+var listadoA = new ListaDeAnimales_1.ListaDeAnimales(arrayAnimales);
+listadoA.buscar(animal4);
+console.log(listadoA.buscar(animal4));
+listadoA.agregarAnimal(animal4);
+console.log(listadoA);
+listadoA.removerAnimal(animal1);
+console.log(listadoA);
